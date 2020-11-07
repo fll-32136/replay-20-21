@@ -52,7 +52,7 @@ def right_att(degrees, Speed):
     right_att_move.drive_time(degrees, 0, Speed)
     right_att_move.stop(Stop.BRAKE)
 
-right_att(360, 1000)
-left_att(360, 1000)
-straight(1000, 1750)
-straight(25, 9000)
+# right_att(360, 1000)
+# left_att(360, 1000)
+# straight(1000, 1750)
+# straight(25, 9000)
