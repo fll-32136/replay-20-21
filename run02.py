@@ -24,3 +24,5 @@ def stepcounter():
     while True:
         straight(175, 250)
         straight(-175, 250)
+
+stepcounter()
