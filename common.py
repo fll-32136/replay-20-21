@@ -18,6 +18,10 @@ def straight(Speed, Time):
     robot.drive_time(Speed, 0, Time) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
+# # def straight_d(Speed, Distance/Speed):
+#     straight(Speed, Time)
+
+
 def pivot_turn(direction, degrees):
     left_motor = Motor(Port.A)
     right_motor = Motor(Port.B)
