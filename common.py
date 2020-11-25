@@ -65,6 +65,16 @@ def straight_(Speed, Time):
     robot.drive_time(Speed, 0, Time) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
+# Use negative direction for right motor
+def attachment(direction, degrees):
+    motor = Motor(Port.C)
+    motor1 = Motor(Port.D)
+    wheel_diameter = 56
+    axle_track = 114
+    robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
+    robot.drive_time(math.pi * axle_track / 4, direction, degrees) #Time in seconds by thousands
+    robot.stop(Stop.BRAKE)
+
 # right_att(360, 1000)
 # left_att(360, 1000)
 # straight(1000, 1750)
