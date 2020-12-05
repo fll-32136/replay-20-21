@@ -11,6 +11,8 @@ from common import *
 
 import time
 
+ev3=EV3Brick()
+
 
 def bench():
     #alignment: the right side of the back wall is at 1 line to the left of the second  vertical bolded line. there's also a tool
@@ -24,16 +26,18 @@ def bench():
     straight(300,1250)
     turn(-45,400)
     straight(200,200)
-    attachment(-500,750)
+    attachment(-500,900)
     ev3.speaker.beep()
-    # straight_(300,1500)  
+    straight(-300,400)  
     # straight(-500,550)
-    turn(-70,500)
-    # straight(450,1700)
-    # turn(90, 750)
-    # straight(200,700)
-    # straight_(-300,1400)
-    # # straight(-300, 950)
+    turn(-79,700)
+    straight(450,1000)
+    turn(90, 800)
+    straight(200,1000)
+    turn(90, -800)
+    straight(200,500)
+    attachment(300,-1400)
+    attachment(-300, 950)
     # # straight_(250,1200)
     # # turn(-70,2800)
     # # straight(500,3000)
