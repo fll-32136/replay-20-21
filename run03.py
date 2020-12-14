@@ -22,41 +22,31 @@ gyro_sensor = GyroSensor(Port.S4)
 # Alignment: Right wheel on 6th line with robot on back wall
 # Attachment start position 2 cubes at the top
 
-def gyro_finder():
-    gyro_sensor = GyroSensor(Port.S4)
-    print(gyro_sensor.angle())
+# def gyro_finder():
+#     gyro_sensor = GyroSensor(Port.S4)
+#     print(gyro_sensor.angle())
 
-left_motor = Motor(Port.B)
-right_motor = Motor(Port.A)
+# left_motor = Motor(Port.B)
+# right_motor = Motor(Port.A)
 
-robot = DriveBase(left_motor, right_motor, wheel_diameter=46, axle_track=114)
+# robot = DriveBase(left_motor, right_motor, wheel_diameter=46, axle_track=114)
 
-def gyro_stop(gyro_num):   
-    gyro_sensor = GyroSensor(Port.S4)
-    gyro_sensor.reset_angle(0)
-    while gyro_sensor.angle() != gyro_num:
-        if gyro_sensor.angle() < gyro_num:
-            robot.drive(50,20)
-        elif gyro_sensor.angle() > gyro_num:
-            robot.drive(50,-20)
+# def gyro_stop(gyro_num):   
+#     gyro_sensor = GyroSensor(Port.S4)
+#     gyro_sensor.reset_angle(0)
+#     while gyro_sensor.angle() != gyro_num:
+#         if gyro_sensor.angle() < gyro_num:
+#             robot.drive(50,20)
+#         elif gyro_sensor.angle() > gyro_num:
+#             robot.drive(50,-20)
 
 def run3():
-    straight(100, 3650)
-    gyro_stop(0)
-    turn(90, 720)
-    straight(100, 40)
-    attachment(-95, 570)
-    straight(100, 490)
-    wait(400)
-    attachment(-95, 600)
-    wait(400)
-    straight(100, 990)
-    wait(400)
-    attachment(-95, 590)
-    wait(400)
+    straight(100, 3250)
+    turn(90, 735)
     straight(100, 500)
-    wait(400)
-    attachment(-95, 610)
+    for x in range (0,3):
+        attachment(-95, 1000)
+        attachment(-95, -1000)
 
 run3()
 
