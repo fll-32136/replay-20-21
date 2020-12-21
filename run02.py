@@ -23,7 +23,7 @@ def run02():
     left_att(2000, -200)
     straight(175, 880)
     left_att(2000, 200)
-
+#buuin
 '''
     #do the lifty thing later
     straight(-175, 650)
