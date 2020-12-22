@@ -40,17 +40,26 @@ gyro_sensor = GyroSensor(Port.S4)
 #         elif gyro_sensor.angle() > gyro_num:
 #             robot.drive(50,-20)
 
-def run3():
-    straight(100, 3250)
-    turn(90, 735)
-    straight(100, 500)
-    for x in range (0,3):
-        attachment(-95, 1000)
-        attachment(-95, -1000)
+motor = Motor(Port.A)
+motor1 = Motor(Port.B)
+wheel_diameter = 46
+axle_track = 114
+robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
 
-run3()
+def absolutly_not():
+    straight(100, 3600)
+    robot.settings(0, 0, 100, 100)
+    robot.turn(-12.5)
+    motor2 = Motor(Port.C)
+    motor3 = Motor(Port.D)
+    wheel_diameter = 46
+    axle_track = 114
+    robot1 = DriveBase(motor2, motor3, wheel_diameter, axle_track)
+    robot1.straight(-20)
+    straight(-100, 1800)
+    turn(-90, 600)
 
-
+absolutly_not()
 
 # straight(200, 1810)
 # gyro_stop(0)
