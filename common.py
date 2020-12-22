@@ -75,3 +75,12 @@ def attachment(direction, degrees):
 # left_att(360, 1000)
 # straight(1000, 1750)
 # straight(25, 9000)
+
+def color_finder():
+    line_sensor = ColorSensor(Port.S3)
+    print(line_sensor.reflection())
+
+def color_stop(color_num):   
+    line_sensor = ColorSensor(Port.S3)
+    while line_sensor.reflection() != color_num:  #when color is not black
+        straight(200,200) #go straight
