@@ -40,21 +40,17 @@ def turn(direction, degrees):
     robot.drive_time(0, direction, degrees)
     robot.stop(Stop.BRAKE)
 
-def left_att(degrees, Speed):
-    left_att_motor = Motor(Port.C)
-    wheel_diameter = 46
-    axle_track = 114
-    left_att_move = DriveBase(left_att_motor, wheel_diameter, axle_track)
-    left_att_move.drive_time(degrees, 0, Speed)
-    left_att_move.stop(Stop.BRAKE)
+def left_att(Time, Speed):
+    #Negative speed goes up (for lift att)
+    robot = Motor(Port.C, positive_direction=Direction.CLOCKWISE, gears=None)
+    robot.run_time(Speed, Time, then=Stop.HOLD, wait=True)
 
-def right_att(degrees, Speed):
-    right_att_motor = Motor(Port.D)
-    wheel_diameter = 46
-    axle_track = 114
-    right_att_move = DriveBase(right_att_motor, wheel_diameter, axle_track)
-    right_att_move.drive_time(degrees, 0, Speed)
-    right_att_move.stop(Stop.BRAKE)
+def right_att(Time, Speed):
+    robot = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
+    robot.run_time(Speed, Time, then=Stop.HOLD, wait=True)
+
+
+
 
 def straight_(Speed, Time):
     motor = Motor(Port.C)
@@ -79,3 +75,12 @@ def attachment(direction, degrees):
 # left_att(360, 1000)
 # straight(1000, 1750)
 # straight(25, 9000)
+
+def color_finder():
+    line_sensor = ColorSensor(Port.S3)
+    print(line_sensor.reflection())
+
+def color_stop(color_num):   
+    line_sensor = ColorSensor(Port.S3)
+    while line_sensor.reflection() != color_num:  #when color is not black
+        straight(200,200) #go straight

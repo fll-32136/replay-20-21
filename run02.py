@@ -9,19 +9,31 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
 import time
-#Alignment: Right wheel at 3rd horizontal line, front of robot is at 6th to last vertical line
+#Alignment: Right DRIVE wheel at 3rd horizontal line, front of robot is at 7th to last vertical line(bold line)
 #  remember to tilt a tad bit to the left
 def run02():
+    # launch to stepcounter
     straight(175, 3500)
     time.sleep(1)
-    straight(25, 8450)
-    #after stepcounter
+    # does stepcounter slowly
+    straight(25, 7850)
+    time.sleep(1)
+    # backs up from stepcounter and turns
     straight(-225, 800)
     pivot_turn(50, 1400)
     pivot_turn(50, 450)
+    # back up to the wall
     straight(-175, 1300)
-    straight(175, 800)
-    '''
+    # launch to pull up bar and drop health units
+    left_att(2000, -200)
+    straight(175, 880)
+    left_att(2000, 200)
+#buuin
+'''
+    #do the lifty thing later
+    straight(-175, 650)
+    turn(-50, 1350)
+
     #after pull-up bar
     turn(50, 800)
     straight(175, 1850)
