@@ -49,6 +49,7 @@ def absolutly_not():
     left_att(500, -1000)
     straight(-100, 1800)
     turn(-90, 300)
+    straight
 
 absolutly_not()
 
