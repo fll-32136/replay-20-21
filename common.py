@@ -49,7 +49,20 @@ def right_att(Time, Speed):
     robot = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
     robot.run_time(Speed, Time, then=Stop.HOLD, wait=True)
 
-
+def strforever(Speed):
+    motor = Motor(Port.A)
+    motor1 = Motor(Port.B) 
+    wheel_diameter = 56
+    axle_track = 114
+    robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
+    robot.drive(Speed, 0)
+def strstop():
+    motor = Motor(Port.A)
+    motor1 = Motor(Port.B) 
+    wheel_diameter = 56
+    axle_track = 114
+    robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
+    robot.stop()
 
 
 def straight_(Speed, Time):

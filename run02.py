@@ -19,15 +19,24 @@ def run02():
     straight(25, 7850)
     time.sleep(1)
     # backs up from stepcounter and turns
-    straight(-225, 800)
+    straight(-150, 1150)
     pivot_turn(50, 1400)
     pivot_turn(50, 450)
     # back up to the wall
     straight(-175, 1300)
     # launch to pull up bar and drop health units
     left_att(2000, -200)
+    time.sleep(1)
     straight(175, 880)
+    time.sleep(2)
     left_att(2000, 200)
+    straight(-125, 900)
+    pivot_turn(-50, 1550)
+    straight(175, 2900)
+    # strforever(200)
+    # right_att(2000,500)
+    # time.sleep(.5)
+    # strstop()
 #buuin
 '''
     #do the lifty thing later
