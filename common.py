@@ -56,6 +56,7 @@ def strforever(Speed):
     axle_track = 114
     robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
     robot.drive(Speed, 0)
+
 def strstop():
     motor = Motor(Port.A)
     motor1 = Motor(Port.B) 
@@ -63,7 +64,6 @@ def strstop():
     axle_track = 114
     robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
     robot.stop()
-
 
 def straight_(Speed, Time):
     motor = Motor(Port.C)

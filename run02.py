@@ -25,18 +25,18 @@ def run02():
     # back up to the wall
     straight(-175, 1300)
     # launch to pull up bar and drop health units
-    left_att(2000, -200)
+    left_att(2200, -200)
     time.sleep(1)
-    straight(175, 880)
+    straight(100, 1500)
     time.sleep(2)
-    left_att(2000, 200)
-    straight(-125, 900)
+    left_att(2200, 200)
+    straight(-75, 1650)
     pivot_turn(-50, 1550)
-    straight(175, 2900)
-    # strforever(200)
-    # right_att(2000,500)
-    # time.sleep(.5)
-    # strstop()
+    straight(175, 3350)
+    right_att(2000,2000)
+    right_att(2000,2000)
+    straight(-175, 9000)
+
 #buuin
 '''
     #do the lifty thing later
