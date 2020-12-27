@@ -45,7 +45,7 @@ def left_att(Time, Speed):
     robot = Motor(Port.C, positive_direction=Direction.CLOCKWISE, gears=None)
     robot.run_time(Speed, Time, then=Stop.HOLD, wait=True)
 
-def right_att(Time, Speed):
+def right_att(Time, Speed): 
     robot = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
     robot.run_time(Speed, Time, then=Stop.HOLD, wait=True)
 

@@ -65,11 +65,18 @@ def run01_2():
 
 def run01_3 ():
     straight(200,1600)
-    turn(-85,570)
+    turn(-85,470)
     straight(200,600)
     turn(85,520)
-    straight(-200,600)
-    turn(-85,500)
+    turn(-85,25)
+    straight(-200,400)
+    turn(-85,350)
+    straight(200,200)
+    turn(85,800)
+    straight(200,500)
+    left_att(2000,-500)
+    left_att(1800,500)
+    straight(-200,1650)
+    turn(-85,550)
 
-
-
+run01_3()
