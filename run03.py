@@ -44,15 +44,24 @@ def absolutly_not():
     straight(100, 3600)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
-    turn(-90, 150)
+    turn(-90, 160)
     # Negative speed makes attachment move 
-    left_att(500, -1000)
-    straight(-100, 1800)
-    turn(-90, 300)
-    straight
-
+    left_att(800, -1000)
+    straight(-100, 1600)
+    turn(-90, 430)
+    straight(100, 8800)
+    turn(90, 700)
+    straight(100, 600)
+    turn(90, 300)
+    straight(-100, 400)
+    turn(-90, 200)
+    straight(100, 400)
+    right_att(650, 1000)
+    turn(90, 700)
+    # straight(100, 400)
+    # turn(90, 900)
 absolutly_not()
-
+    
 # straight(200, 1810)
 # gyro_stop(0)
 # turn(90, 664)
