@@ -11,15 +11,19 @@ from common import *
 
 import time
 
+
 ev3=EV3Brick()
-colorsensor=ColorSensor(Port.S3)
+#initializing  color sensor and motors
+leftcolorsensor=ColorSensor(Port.S3)
+rightcolorsensor=ColorSensor(Port.S1)
 BLACK=5
 WHITE=55
+# intializing drivebase and related values
 right_motor = Motor(Port.A)
 left_motor = Motor(Port.B) 
 wheel_diameter = 56 
 axle_track = 114
-straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
+drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
 
 
 
