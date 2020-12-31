@@ -148,6 +148,3 @@ def run01_5():
     # turn(-200,1950)
     # straight(-1000,3000)
 # run01_5()
-
-straight_robot.drive(200,0)
-colorstop(straight_robot,colorsensor)
