@@ -1,6 +1,4 @@
 #!/usr/bin/env pybricks-micropython
-from ucollections import namedtuple
-import urandom
 from pybricks.hubs import *
 from math import *
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
@@ -41,16 +39,15 @@ gyro_sensor = GyroSensor(Port.S4)
 #             robot.drive(50,-20)
 
 def absolutly_not():
-    
     straight(100, 3600)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
-    turn(-90, 160)
+    turn(-90, 185)
     # Negative speed makes attachment move 
     left_att(800, -1000)
     straight(-100, 1600)
     turn(-90, 430)
-    straight(100, 8800)
+    straight(1000, 3500)
     turn(90, 700)
     straight(100, 600)
     turn(90, 300)
@@ -59,8 +56,11 @@ def absolutly_not():
     straight(100, 400)
     right_att(650, 1000)
     turn(90, 700)
-    # straight(100, 400)
-    # turn(90, 900)
+    straight(100, 1000)
+    turn(90, 800)
+    while True:
+        straight(-100, 600)
+        straight(100, 800)
 absolutly_not()
     
 # straight(200, 1810)
