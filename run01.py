@@ -142,8 +142,7 @@ def run01_5():
     # wait(100)
     straight(-250,750)
     turn(-85,1550)
-    drivebase(200,0)
-    colorstop(drivebase,rightcolorsensor)
-# run01_5()
-drivebase(200,0)
-colorstop(drivebase,rightcolorsensor)
+    strforever(100)
+    colorstop(rightcolorsensor) 
+run01_5()
+

@@ -102,11 +102,12 @@ def color_stop(color_num):
     while line_sensor.reflection() != color_num:  #when color is not black
         straight(200,200) #go straight
 
-def colorstop(straight_robot,colorsensor):
+def colorstop(colorsensor):
     while True:
-        if colorsensor.reflection()<=5:
+        if colorsensor.reflection()<=9:
             straight_robot.stop()
             break
+    straight_robot.stop()
             
 
     # motor=Motor(Port.A)
