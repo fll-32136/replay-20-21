@@ -18,10 +18,6 @@ def straight(Speed, Time):
     robot.drive_time(Speed, 0, Time) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
-# # def straight_d(Speed, Distance/Speed):
-#     straight(Speed, Time)
-
-
 def pivot_turn(direction, degrees):
     left_motor = Motor(Port.A)
     right_motor = Motor(Port.B)
@@ -39,6 +35,14 @@ def turn(direction, degrees):
     robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
     robot.drive_time(0, direction, degrees)
     robot.stop(Stop.BRAKE)
+
+def turn_forever(direction):
+    motor = Motor(Port.A)
+    motor1 = Motor(Port.B)
+    wheel_diameter = 46
+    axle_track = 114
+    robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
+    robot.drive_time(0, direction, 0)
 
 def left_att(Time, Speed):
     #Negative speed goes up (for lift att)
@@ -98,11 +102,12 @@ def color_stop(color_num):
     while line_sensor.reflection() != color_num:  #when color is not black
         straight(200,200) #go straight
 
-def colorstop(straight_robot,colorsensor):
+def colorstop(colorsensor):
     while True:
-        if colorsensor.reflection()<=5:
+        if colorsensor.reflection()<=9:
             straight_robot.stop()
             break
+    straight_robot.stop()
             
 
     # motor=Motor(Port.A)

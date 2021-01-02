@@ -24,8 +24,7 @@ left_motor = Motor(Port.B)
 wheel_diameter = 56 
 axle_track = 114
 drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
-
-
+right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
 
 def bench():
     #alignment: the right side of the back wall is at 1 line to the left of the second  vertical bolded line. there's also a tool
@@ -119,7 +118,7 @@ def run01_4():
     straight(-750,2250)
 
 def run01_5():
-    straight(200,1650)
+    straight(200,1700)
     wait(100)
     turn(-85,400)
     wait(100)
@@ -137,18 +136,13 @@ def run01_5():
     wait(100)
     straight(200,500)
     wait(100)
-    left_att(2000,-500)
+    left_att(2000,-700)
     wait(100)
     left_att(1800,500)
-    wait(100)
-    straight(-200,2200)
-    wait(100)
-    turn(-85,700)
-    wait(100)
-    straight(-100,3500)
-    wait(100)
-    straight(150,5555)
-    # straight(-200,700)
-    # turn(-200,1950)
-    # straight(-1000,3000)
-# run01_5()
+    # wait(100)
+    straight(-250,750)
+    turn(-85,1550)
+    strforever(100)
+    colorstop(rightcolorsensor) 
+run01_5()
+
