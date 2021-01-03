@@ -21,29 +21,29 @@ right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=No
 #  remember to tilt a tad bit to the left
 def run02():
     # launch to stepcounter
-    # straight(175, 3500)
-    # time.sleep(1)
-    # # does stepcounter slowly
-    # straight(25, 7850)
-    # time.sleep(1)
-    # # backs up from stepcounter and turns
-    # straight(-150, 1150)
-    # pivot_turn(50, 1400)
-    # pivot_turn(50, 450)
+    straight(175, 3500)
+    time.sleep(1)
+    # does stepcounter slowly
+    straight(25, 7850)
+    time.sleep(1)
+    # backs up from stepcounter and turns
+    straight(-150, 1150)
+    pivot_turn(50, 1400)
+    pivot_turn(50, 450)
     # back up to the wall
-    # straight(-175, 1300)
-    # # launch to pull up bar and drop health units
-    # left_att(2200, -200)
-    # time.sleep(1)
-    # straight(100, 1600)
-    # time.sleep(2)
-    # left_att(2300, 200)
-    # # launch to treadmill and does treadmill
-    # straight(-75, 1850)
-    # pivot_turn(-50, 1580)
-    # # straight(170, 3550)
+    straight(-175, 1300)
+    # launch to pull up bar and drop health units
+    left_att(2200, -200)
+    time.sleep(1)
+    straight(100, 1600)
+    time.sleep(2)
+    left_att(2300, 200)
+    # launch to treadmill and does treadmill
+    straight(-75, 1780)
+    pivot_turn(-50, 1550)
+    # straight(170, 3550)
     straight_robot.drive(250, 0)
-    time.sleep(2.2)
+    time.sleep(1.5)
     right_att_motor.run(-1000)
     time.sleep(3)
     straight_robot.stop()

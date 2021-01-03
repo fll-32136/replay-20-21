@@ -134,8 +134,13 @@ def run01_5():
     turn(-50,1350)
     # strforever(100)
     # colorstop(rightcolorsensor) 
-    straight(150,3400)
-    straight(-300,500)
+    straight(150,3050)
+    straight(-300,700)
+    turn(50,1100)
+    straight(100, 1300)
+    straight(-300, 700)
+    turn(-50, 2100)
+    straight(-300, 2000)
 run01_5()
 
 
