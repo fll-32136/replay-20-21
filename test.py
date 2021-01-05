@@ -6,35 +6,55 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
-import time
 
 ev3 = EV3Brick()
 
-ev3=EV3Brick()
-#initializing  color sensor and motors
-leftcolorsensor=ColorSensor(Port.S3)
-rightcolorsensor=ColorSensor(Port.S1)
-BLACK=5
-WHITE=55
-# intializing drivebase and related values
-right_motor = Motor(Port.A)
-left_motor = Motor(Port.B) 
-wheel_diameter = 56 
-axle_track = 114
-drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
-right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
-
 left_motor = Motor(Port.A)
 right_motor = Motor(Port.B)
-left_line_sensor = ColorSensor(Port.S3)
-right_line_sensor = ColorSensor(Port.S1)
+rline_sensor = ColorSensor(Port.S1)
+lline_sensor = ColorSensor(Port.S3)
 
-wheel_diameter = 56
+wheel_diameter = 46
 axle_track = 114
 robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
 
+BLACK = 6
 WHITE = 85
 
+DRIVE_SPEED = 50
+
+r = rline_sensor.reflection()
+l = lline_sensor.reflection()
+
+
 strforever(100)
-while left_line_sensor != WHITE:
-    pivot_forever(-85,0)
+while True:
+    if r <= BLACK:
+        right_motor.Stop()
+
+    elif l <= BLACK:
+        left_motor.Stop()
+
+    elif r <=  BLACK and l <= BLACK:
+        robot.Stop()
+        break
+
+    else:
+        continue
+
+straight(500,75)
+
+strforever(-100)
+while True:
+    if r <= BLACK:
+        right_motor.Stop()
+
+    elif l <= BLACK:
+        left_motor.Stop()
+
+    elif r <=  BLACK and l <= BLACK:
+        robot.Stop()
+        break
+
+    else:
+        continue
