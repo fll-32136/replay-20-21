@@ -95,7 +95,6 @@ def run01_3():
     turn(-200,190)
     straight(-1000,3000)
 
-
 def run01_4():
     straight(150,2000)
     turn(-85,470)
@@ -131,16 +130,13 @@ def run01_5():
     left_att(1800,500)
     # wait(100)
     straight(-250,750)
-    turn(-50,1350)
+    turn(-50,1550)
     # strforever(100)
     # colorstop(rightcolorsensor) 
-    straight(150,3050)
-    straight(-300,700)
-    turn(50,1100)
+    straight(150,2800)
+    straight(-300,600)
+    turn(50,1055)
     straight(100, 1300)
     straight(-300, 700)
-    turn(-50, 2100)
-    straight(-300, 2000)
+    turn(-85,1100)
 run01_5()
-
-
