@@ -18,6 +18,19 @@ def straight(Speed, Time):
     robot.drive_time(Speed, 0, Time) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
+def gyrorun(Speed, Time):
+    gy = GyroSensor(Port.S2) 
+    gy.reset_angle(0)
+    while True:
+        print(gy.angle())
+        straight(100,1000)
+        if gy.angle() >= 7:
+            y = gy.angle()*6.25
+            turn(-500, y)
+        if gy.angle() <= (-7) :
+            y = -(gy.angle())*6.25
+            turn(500, y) 
+
 def pivot_turn(direction, degrees):
     left_motor = Motor(Port.A)
     right_motor = Motor(Port.B)
