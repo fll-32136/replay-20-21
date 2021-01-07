@@ -8,7 +8,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
-from time import *
+import time
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
 
@@ -39,31 +39,33 @@ gyro_sensor = GyroSensor(Port.S4)
 #             robot.drive(50,-20)
 
 def absolutly_not():
-    straight(100, 3600)
+    straight(100, 3550)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
-    turn(-90, 185)
+    turn(-90, 145)
     # Negative speed makes attachment move 
     left_att(800, -1000)
-    straight(-100, 1000)
-    turn(-90, 420)
-    straight(1000, 3600)
+    straight(-100, 900)
+    turn(-90, 400)
+    straight(1000, 3500)
     turn(90, 700)
     straight(100, 600)
     turn(90, 300)
     straight(-100, 550)
     turn(-90, 200)
-    straight(100, 200)
-    right_att(650, -1000)
+    straight(100, 400)
+    right_att(650, -200)
+    time.sleep(3)
+    straight(-300, 500)
     turn(90, 500)
-    straight(100,1500)
+    straight(100, 2500)
     turn(90, 750)
-    straight(-100, 500)
+    straight(-100, 1500)
     while True:
         straight(-100, 800)
         straight(100, 600)
 absolutly_not()
-    
+
 # straight(200, 1810)
 # gyro_stop(0)
 # turn(90, 664)
