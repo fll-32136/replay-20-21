@@ -125,6 +125,10 @@ def colorstop(colorsensor):
             straight_robot.stop()
             break
     straight_robot.stop()
+
+def infiniteturn():
+    while True:
+        
             
 
     # motor=Motor(Port.A)
