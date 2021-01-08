@@ -95,7 +95,6 @@ def run01_3():
     turn(-200,190)
     straight(-1000,3000)
 
-
 def run01_4():
     straight(150,2000)
     turn(-85,470)
@@ -120,7 +119,8 @@ def run01_4():
 def run01_5():
     straight(200,1700)
     turn(-85,400)
-    straight(200,600)
+    straight(300,400)
+    #knocks off bench
     turn(85,520)
     straight(-200,450)
     turn(-85,450)
@@ -129,18 +129,24 @@ def run01_5():
     straight(200,500)
     left_att(2000,-700)
     left_att(1800,500)
+    straight(-250,800)
+    turn(-100,1500)
+    strforever(100)
+    colorstop(rightcolorsensor) 
+    #drops attachment
     # wait(100)
-    straight(-250,750)
-    turn(-50,1350)
-    # strforever(100)
-    # colorstop(rightcolorsensor) 
-    straight(150,3050)
-    straight(-300,700)
-    turn(50,1100)
-    straight(100, 1300)
-    straight(-300, 700)
-    turn(-50, 2100)
-    straight(-300, 2000)
+
 run01_5()
 
 
+    # straight(-250,750)
+    # turn(-50,1550)
+
+    # straight(150,2800)
+    # straight(-300,800)
+    # #boccia
+    # turn(50,1050)
+    # straight(100, 1300)
+    # straight(-300, 700)
+    # turn(-85,1100)
+    # straight
