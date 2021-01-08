@@ -43,9 +43,9 @@ def run02():
     # straight(-75, 1725)
 
     # pivot_turn(-50, 1580)
-    # straight(170, 3500)
-    right_att(8000, 2000)
-    right_att(4000, 2000)
+    straight(170, 3500)
+    right_att(8000, -2000)
+    right_att(4000, -2000)
 
     '''
     straight_robot.drive(250, 0)
