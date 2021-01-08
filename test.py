@@ -18,49 +18,52 @@ lline_sensor = ColorSensor(Port.S3)
 wheel_diameter = 46
 axle_track = 114
 straight_robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
+
 leftdrive = Motor(Port.B, positive_direction=Direction.CLOCKWISE, gears=None)
 rightdrive= Motor(Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
+
 RBLACK = 4
 LBLACK = 7
 
-r = rline_sensor.reflection()
-l = lline_sensor.reflection()
-print("right = ",r, "left =",l)
-
-straight_robot.drive(200,0)
-while True:
+def line_square():
     r = rline_sensor.reflection()
     l = lline_sensor.reflection()
-    if r <= RBLACK:
-        straight_robot.stop()
-        wait(100)
-        while l > LBLACK:
-            r = rline_sensor.reflection()
-            l = lline_sensor.reflection()
-            print("right = ",r, "left =",l)
-            leftdrive.run(50)
-        leftdrive.stop()
-        while r > RBLACK:
-            r = rline_sensor.reflection()
-            l = lline_sensor.reflection()
-            print("right = ",r, "left =",l)
-            rightdrive.run(-50)
-        rightdrive.stop()
-        break
+    print("right = ",r, "left =",l)
 
-    if l <= LBLACK:
-        straight_robot.stop()
-        wait(100)
-        while r > RBLACK:
-            r = rline_sensor.reflection()
-            l = lline_sensor.reflection()
-            print("right = ",r, "left =",l)
-            rightdrive.run(50)
-        rightdrive.stop()
-        while l > LBLACK:
-            r = rline_sensor.reflection()
-            l = lline_sensor.reflection()
-            print("right = ",r, "left =",l)
-            leftdrive.run(-50)
-        leftdrive.stop()
-        break
+    straight_robot.drive(200,0)
+    while True:
+        r = rline_sensor.reflection()
+        l = lline_sensor.reflection()
+        if r <= RBLACK:
+            straight_robot.stop()
+            wait(100)
+            while l > LBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                leftdrive.run(50)
+            leftdrive.stop()
+            while r > RBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                rightdrive.run(-50)
+            rightdrive.stop()
+            break
+
+        if l <= LBLACK:
+            straight_robot.stop()
+            wait(100)
+            while r > RBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                rightdrive.run(50)
+            rightdrive.stop()
+            while l > LBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                leftdrive.run(-50)
+            leftdrive.stop()
+            break
