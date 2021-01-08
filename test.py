@@ -30,10 +30,12 @@ l = lline_sensor.reflection()
 strforever(100)
 while True:
     if r <= BLACK:
-        right_motor.Stop()
+        while l =! BLACK:
+            pivot_turn(30,100)
 
     elif l <= BLACK:
-        left_motor.Stop()
+        while r =! BLACK:
+            pivot_turn(-30,100)
 
     elif r <=  BLACK and l <= BLACK:
         robot.Stop()
@@ -47,10 +49,12 @@ straight(500,75)
 strforever(-100)
 while True:
     if r <= BLACK:
-        right_motor.Stop()
+        while l =! BLACK:
+            pivot_turn(30,100)
 
     elif l <= BLACK:
-        left_motor.Stop()
+        while r =! BLACK:
+            pivot_turn(-30,100)
 
     elif r <=  BLACK and l <= BLACK:
         robot.Stop()
