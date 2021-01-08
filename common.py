@@ -50,6 +50,10 @@ def turn(direction, degrees):
     robot.stop(Stop.BRAKE)
 
 def turn_forever(direction):
+    while True:
+        pivot_turn(50,100)
+
+def turn_forever(direction):
     motor = Motor(Port.A)
     motor1 = Motor(Port.B)
     wheel_diameter = 46
