@@ -128,8 +128,9 @@ def colorstop(colorsensor):
 
 def infiniteturn():
     while True:
-        
-            
+        pivot_turn(300,1000)
+
+
 
     # motor=Motor(Port.A)
     # motor1=Motor(Port.B)
