@@ -20,29 +20,30 @@ right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=No
 #Alignment: Right DRIVE wheel at 3rd horizontal line, front of robot is at 7th to last vertical line(bold line)
 #  remember to tilt a tad bit to the left
 def run02():
-    # # launch to stepcounter
-    # straight(175, 3500)
-    # time.sleep(1)
-    # # does stepcounter slowly
-    # straight(25, 7850)
-    # time.sleep(1)
-    # # backs up from stepcounter and turns
-    # straight(-150, 1150)
-    # pivot_turn(50, 1400)
-    # pivot_turn(50, 450)
-    # # back up to the wall
-    # straight(-175, 1250)
-    # # launch to pull up bar and drop health units
-    # left_att(2200, -200)
-    # time.sleep(1)
-    # straight(100, 1550)
-    # time.sleep(2)
-    # left_att(2300, 200)
+    # launch to stepcounter
+    straight(175, 3500)
+    time.sleep(1)
+    # does stepcounter slowly
+    straight(25, 7725)  #used to be 7850
+    time.sleep(1)
+    # backs up from stepcounter and turns
+    straight(-150, 1150)
+    pivot_turn(50, 1400)
+    pivot_turn(50, 450)
+    # back up to the wall
+    straight(-175, 1250)
+    # launch to pull up bar and drop health units
+    left_att(2200, -200)
+    time.sleep(1)
+    straight(100, 1550)
+    time.sleep(2)
+    left_att(2300, 200)
 
-    # # launch to treadmill and does treadmill
-    # straight(-75, 1725)
+    # launch to treadmill and does treadmill
+    straight(-75, 1725)
 
-    # pivot_turn(-50, 1580)
+    # remember this is the oldone pivot_turn(-50, 1580)
+    pivot_turn(-50, 1580)
     straight(170, 3500)
     right_att(8000, -2000)
     right_att(4000, -2000)
@@ -56,24 +57,25 @@ def run02():
     right_att_motor.stop()
     # right_att(2000,2000)
     # right_att(2000,2000)
+    '''
     # after treadmill, aligns by backing up to the wall
-    # straight(-175, 900)
-    # pivot_turn(50, 1600)
-    # straight(-250, 1500)
-    # # launches to row machine
-    # straight(250, 100)
-    # pivot_turn(50, 350)
-    # straight(250, 400)
-    # pivot_turn(-50, 1900)
-    # pivot_turn(-50, 150)
-    # # does row machine
-    # left_att(300, -200)
-    # straight(100, 500)
-    # left_att(600, 200)
-    # straight(-100, 1400)
-    # pivot_turn(50, 550)
+    straight(-175, 900)
+    pivot_turn(50, 1600)
+    straight(-250, 1500)
+    # launches to row machine
+    straight(250, 100)
+    pivot_turn(50, 350)
+    straight(250, 400)
+    pivot_turn(-50, 1900)
+    pivot_turn(-50, 150)
+    # does row machine
+    left_att(300, -200)
+    straight(100, 500)
+    left_att(600, 200)
+    straight(-100, 1400)
+    pivot_turn(50, 550)
 #buuin
-
+'''
     #do the lifty thing later
     straight(-175, 650)
     turn(-50, 1350)

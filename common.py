@@ -129,7 +129,7 @@ def colorstop(colorsensor):
 def infiniteturn():
     while True:
         
-            
+        x= 'hi'
 
     # motor=Motor(Port.A)
     # motor1=Motor(Port.B)
@@ -137,4 +137,3 @@ def infiniteturn():
     # robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
     # BLACK=5
     # WHITE=54
-
