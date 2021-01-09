@@ -10,12 +10,12 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
 import time
 
-right_motor = Motor(Port.A)
-left_motor = Motor(Port.B) 
-wheel_diameter = 56 
-axle_track = 114
-straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
-right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
+# right_motor = Motor(Port.A)
+# left_motor = Motor(Port.B) 
+# wheel_diameter = 56 
+# axle_track = 114
+# straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
+# right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
 
 #Alignment: Right DRIVE wheel at 3rd horizontal line, front of robot is at 7th to last vertical line(bold line)
 #  remember to tilt a tad bit to the left
