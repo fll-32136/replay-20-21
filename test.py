@@ -6,6 +6,7 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
+from common import *
 
 ev3 = EV3Brick()
 
@@ -16,49 +17,53 @@ lline_sensor = ColorSensor(Port.S3)
 
 wheel_diameter = 46
 axle_track = 114
-robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
+straight_robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
 
-BLACK = 6
-WHITE = 85
+leftdrive = Motor(Port.B, positive_direction=Direction.CLOCKWISE, gears=None)
+rightdrive= Motor(Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
 
-DRIVE_SPEED = 50
+RBLACK = 4
+LBLACK = 7
 
-r = rline_sensor.reflection()
-l = lline_sensor.reflection()
+def line_square():
+    r = rline_sensor.reflection()
+    l = lline_sensor.reflection()
+    print("right = ",r, "left =",l)
 
+    straight_robot.drive(200,0)
+    while True:
+        r = rline_sensor.reflection()
+        l = lline_sensor.reflection()
+        if r <= RBLACK:
+            straight_robot.stop()
+            wait(100)
+            while l > LBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                leftdrive.run(50)
+            leftdrive.stop()
+            while r > RBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                rightdrive.run(-50)
+            rightdrive.stop()
+            break
 
-strforever(100)
-while True:
-    if r <= BLACK:
-        while l =! BLACK:
-            pivot_turn(30,100)
-
-    elif l <= BLACK:
-        while r =! BLACK:
-            pivot_turn(-30,100)
-
-    elif r <=  BLACK and l <= BLACK:
-        robot.Stop()
-        break
-
-    else:
-        continue
-
-straight(500,75)
-
-strforever(-100)
-while True:
-    if r <= BLACK:
-        while l =! BLACK:
-            pivot_turn(30,100)
-
-    elif l <= BLACK:
-        while r =! BLACK:
-            pivot_turn(-30,100)
-
-    elif r <=  BLACK and l <= BLACK:
-        robot.Stop()
-        break
-
-    else:
-        continue
+        if l <= LBLACK:
+            straight_robot.stop()
+            wait(100)
+            while r > RBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                rightdrive.run(50)
+            rightdrive.stop()
+            while l > LBLACK:
+                r = rline_sensor.reflection()
+                l = lline_sensor.reflection()
+                print("right = ",r, "left =",l)
+                leftdrive.run(-50)
+            leftdrive.stop()
+            break
