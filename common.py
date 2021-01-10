@@ -121,7 +121,7 @@ def color_stop(color_num):
 
 def colorstop(colorsensor):
     while True:
-        if colorsensor.reflection()<=9:
+        if colorsensor.reflection()<=6:
             straight_robot.stop()
             break
     straight_robot.stop()
