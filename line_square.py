@@ -30,7 +30,7 @@ def line_square(RBLACK,LBLACK):
     l = lline_sensor.reflection()
     print("right = ",r, "left =",l)
 
-    straight_robot.drive(100,0)
+    straight_robot.drive(70,0)
     while True:
         r = rline_sensor.reflection()
         l = lline_sensor.reflection()
@@ -41,13 +41,13 @@ def line_square(RBLACK,LBLACK):
                 r = rline_sensor.reflection()
                 l = lline_sensor.reflection()
                 print("right = ",r, "left =",l)
-                leftdrive.run(-50)
+                leftdrive.run(50)
             leftdrive.stop()
             while r > RBLACK:
                 r = rline_sensor.reflection()
                 l = lline_sensor.reflection()
                 print("right = ",r, "left =",l)
-                rightdrive.run(50)
+                rightdrive.run(-50)
             rightdrive.stop()
             break
 
@@ -74,3 +74,7 @@ def line_square(RBLACK,LBLACK):
 # r = rline_sensor.reflection()
 # l = lline_sensor.reflection()
 # print("right = ",r, "left =",l)
+
+r = rline_sensor.reflection()
+l = lline_sensor.reflection()
+print("right = ",r, "left =",l)
