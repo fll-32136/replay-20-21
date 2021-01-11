@@ -26,11 +26,11 @@ def run02():
     straight(175, 3300)
     time.sleep(1)
     # does stepcounter slowly
-    straight(25, 7725)  
+    straight(18, 11225)  
     time.sleep(1)
     # backs up from stepcounter and turns
-    straight(-150, 925)
-    pivot_turn(50, 1400)
+    straight(-150, 825)
+    pivot_turn(50, 1200)
     pivot_turn(50, 450)
     # back up to the wall
     straight(-175, 1250)
@@ -43,14 +43,33 @@ def run02():
     # launch to treadmill and does treadmill
     straight(-75, 1350)
     # remember this is the oldone pivot_turn(-50, 1580)
-    turn(-85, 800)
-    straight(170, 3600)
+    turn(-85, 760)
+    straight(170, 3500)
     right_att(8000, 2000)
     right_att(4000, 2000)
-    
-    
+    # after treadmill, aligns by backing up to the wall
+    straight(-250, 300)
+    pivot_turn(50, 1500)
+    straight(-250, 1500)
+    straight(250, 100)
+    pivot_turn(50, 350)
+    straight(250, 400)
+    left_att(1000, -200)
+    pivot_turn(-50, 1700)
+    straight( 250, 200)
+    left_att(1200, 200)
+    straight(-100, 1300)
+    pivot_turn(50, 700)
+    left_att(2000, -200)
+    '''
+    # does row machine
+    left_att(300, -200)
+    straight(100, 500)
+    left_att(600, 200)
+    straight(-100, 1400)
+    pivot_turn(50, 550)
 
-'''
+
     straight_robot.drive(250, 0)
     time.sleep(1.5)
     right_att_motor.run(-1000)
@@ -59,23 +78,11 @@ def run02():
     right_att_motor.stop()
     # right_att(2000,2000)
     # right_att(2000,2000)
-    '''
-    # after treadmill, aligns by backing up to the wall
-    # straight(-175, 900)
-    # pivot_turn(50, 1600)
-    # straight(-250, 1500)
-    # # launches to row machine
-    # straight(250, 100)
-    # pivot_turn(50, 350)
-    # straight(250, 400)
-    # pivot_turn(-50, 1900)
-    # pivot_turn(-50, 150)
-    # # does row machine
-    # left_att(300, -200)
-    # straight(100, 500)
-    # left_att(600, 200)
-    # straight(-100, 1400)
-    # pivot_turn(50, 550)
+'''
+
+    # launches to row machine
+
+
 #buuin
 '''
     #do the lifty thing later
