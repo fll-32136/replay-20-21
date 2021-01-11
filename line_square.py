@@ -22,15 +22,15 @@ straight_robot = DriveBase(left_motor, right_motor, wheel_diameter, axle_track)
 leftdrive = Motor(Port.B, positive_direction=Direction.CLOCKWISE, gears=None)
 rightdrive= Motor(Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
 
-RBLACK = 4
-LBLACK = 7
 
-def line_square():
+
+
+def line_square(RBLACK,LBLACK):
     r = rline_sensor.reflection()
     l = lline_sensor.reflection()
     print("right = ",r, "left =",l)
 
-    straight_robot.drive(200,0)
+    straight_robot.drive(100,0)
     while True:
         r = rline_sensor.reflection()
         l = lline_sensor.reflection()
@@ -41,13 +41,13 @@ def line_square():
                 r = rline_sensor.reflection()
                 l = lline_sensor.reflection()
                 print("right = ",r, "left =",l)
-                leftdrive.run(50)
+                leftdrive.run(-50)
             leftdrive.stop()
             while r > RBLACK:
                 r = rline_sensor.reflection()
                 l = lline_sensor.reflection()
                 print("right = ",r, "left =",l)
-                rightdrive.run(-50)
+                rightdrive.run(50)
             rightdrive.stop()
             break
 
@@ -67,3 +67,10 @@ def line_square():
                 leftdrive.run(-50)
             leftdrive.stop()
             break
+
+        if r <= RBLACK and l <= LBLACK:
+            break
+
+# r = rline_sensor.reflection()
+# l = lline_sensor.reflection()
+# print("right = ",r, "left =",l)

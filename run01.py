@@ -8,6 +8,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
+from line_square import *
 
 import time
 
@@ -19,12 +20,12 @@ rightcolorsensor=ColorSensor(Port.S1)
 BLACK=5
 WHITE=55
 # intializing drivebase and related values
-right_motor = Motor(Port.A)
-left_motor = Motor(Port.B) 
-wheel_diameter = 56 
-axle_track = 114
-drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
-right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
+# right_motor = Motor(Port.A)
+# left_motor = Motor(Port.B) 
+# wheel_diameter = 46 
+# axle_track = 114
+# drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
+# right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
 
 def bench():
     #alignment: the right side of the back wall is at 1 line to the left of the second  vertical bolded line. there's also a tool
@@ -136,17 +137,28 @@ def run01_5():
     #drops attachment
     # wait(100)
 
-run01_5()
-
-
-    # straight(-250,750)
-    # turn(-50,1550)
-
-    # straight(150,2800)
-    # straight(-300,800)
-    # #boccia
-    # turn(50,1050)
-    # straight(100, 1300)
-    # straight(-300, 700)
-    # turn(-85,1100)
-    # straight
+def run01_6():
+    straight(200,1700)
+    turn(-85,400)    
+    straight(200,600)
+    turn(85,520)
+    straight(-200,450)
+    turn(-85,450)
+    straight(200,200)
+    turn(85,400)
+    straight(-200,300)
+    turn(85,740)
+    line_square(11,7)
+    left_att(2000,-700)
+    left_att(1800,500)
+    # wait(100)
+    straight(-250,1150)
+    turn(-50,1250)
+    # print("squaring to line")
+    line_square(9,5)
+    turn(-50,400)
+    straight(200,875)
+    straight(-250,532)
+    turn(85,756)
+    straight(175,654)
+run01_6()

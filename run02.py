@@ -10,12 +10,14 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
 import time
 
-right_motor = Motor(Port.A)
-left_motor = Motor(Port.B) 
-wheel_diameter = 56 
-axle_track = 114
-straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
-right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
+# right_motor = Motor(Port.A)
+# left_motor = Motor(Port.B) 
+# wheel_diameter = 56 
+# axle_track = 114
+# straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
+# right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
+rightcolor = ColorSensor(Port.S1)
+
 
 #Alignment: Right DRIVE wheel at 3rd horizontal line, front of robot is at 7th to last vertical line(bold line)
 #  remember to tilt a tad bit to the left
@@ -24,7 +26,7 @@ def run02():
     straight(175, 3300)
     time.sleep(1)
     # does stepcounter slowly
-    straight(25, 7725)  #used to be 7850
+    straight(25, 7725)  
     time.sleep(1)
     # backs up from stepcounter and turns
     straight(-150, 925)
@@ -36,18 +38,17 @@ def run02():
     left_att(2200, -200)
     time.sleep(1)
     straight(100, 1550)
-    
     time.sleep(2)
     left_att(2300, 200)
-
     # launch to treadmill and does treadmill
-    straight(-75, 1725)
-
+    straight(-75, 1350)
     # remember this is the oldone pivot_turn(-50, 1580)
-    pivot_turn(-50, 1580)
-    straight(170, 3500)
+    turn(-85, 800)
+    straight(170, 3600)
     right_att(8000, 2000)
     right_att(4000, 2000)
+    
+    
 
 '''
     straight_robot.drive(250, 0)
