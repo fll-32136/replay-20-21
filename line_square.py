@@ -25,12 +25,12 @@ rightdrive= Motor(Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
 
 
 
-def line_square(RBLACK,LBLACK):
+def line_square(RBLACK,LBLACK,SPEED):
     r = rline_sensor.reflection()
     l = lline_sensor.reflection()
     print("right = ",r, "left =",l)
 
-    straight_robot.drive(70,0)
+    straight_robot.drive(SPEED,0)
     while True:
         r = rline_sensor.reflection()
         l = lline_sensor.reflection()

@@ -119,9 +119,9 @@ def color_stop(color_num):
     while line_sensor.reflection() != color_num:  #when color is not black
         straight(200,200) #go straight
 
-def colorstop(colorsensor):
+def colorstop(straight_robot,colorsensor,colorvalue):
     while True:
-        if colorsensor.reflection()<=6:
+        if colorsensor.reflection()<=colorvalue:
             straight_robot.stop()
             break
     straight_robot.stop()

@@ -8,14 +8,23 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from common import *
+from line_square import *
 import time
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
 
-
+right_motor = Motor(Port.A)
+left_motor = Motor(Port.B) 
+wheel_diameter = 56 
+axle_track = 114
+straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
 # Create your objects here.
 ev3 = EV3Brick()
 gyro_sensor = GyroSensor(Port.S4)
+leftcolorsensor=ColorSensor(Port.S3)
+rightcolorsensor=ColorSensor(Port.S1)
+BLACK=5
+WHITE=55
 
 # Alignment: Right wheel on 6th line with robot on back wall
 # Attachment start position 2 cubes at the top
@@ -45,22 +54,24 @@ def absolutly_not():
     turn(-90, 175)
     time.sleep(1)
     # Negative speed makes attachment move 
-    left_att(4000, -2000)
-    straight(-100, 900)
-    turn(-90, 420)
-    straight(1000, 3600)
-    turn(90, 700)
-    straight(100, 600)
-    turn(90, 300)
-    straight(-100, 550)
-    turn(-90, 200)
-    straight(100, 400)
+    left_att(3000, -2000)
+    straight(-1000, 1000)
+    turn(-90, 230)
+    straight(400, 1600)
+    line_square(11,7,70)
+    straight(400, 400)
+    turn(90, 950)
+    straight(-200, 1500)
+    straight_robot.drive(-200, 0)
+    colorstop(straight_robot, rightcolorsensor, 6)
+    pivot_turn(-90, 600)
+    straight(300, 550)
     right_att(650, -200)
-    time.sleep(3)
+    time.sleep(0.5)
     straight(-300, 500)
-    turn(90, 600)
-    straight(100, 2500)
-    turn(90, 600)
+    turn(90, 500)
+    straight(400, 1300)
+    turn(90, 700)
     straight(-100, 1500)
     while True:
         straight(-100, 800)
@@ -70,12 +81,13 @@ absolutly_not()
     # straight(100, 3550)
     # # robot.settings(0, 0, 100, 100)
     # # robot.turn(-12.5)
-    # turn(-90, 145)
+    # turn(-90, 175)
+    # time.sleep(1)
     # # Negative speed makes attachment move 
-    # left_att(1500, -1000)
+    # left_att(4000, -2000)
     # straight(-100, 900)
-    # turn(-90, 400)
-    # straight(1000, 3500)
+    # turn(-90, 420)
+    # straight(1000, 3600)
     # turn(90, 700)
     # straight(100, 600)
     # turn(90, 300)
@@ -85,9 +97,9 @@ absolutly_not()
     # right_att(650, -200)
     # time.sleep(3)
     # straight(-300, 500)
-    # turn(90, 500)
+    # turn(90, 600)
     # straight(100, 2500)
-    # turn(90, 750)
+    # turn(90, 600)
     # straight(-100, 1500)
     # while True:
     #     straight(-100, 800)
