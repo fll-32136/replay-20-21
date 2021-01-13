@@ -29,7 +29,7 @@ def run02():
     straight(18, 11225)  
     time.sleep(1)
     # backs up from stepcounter and turns
-    straight(-150, 825)
+    straight(-150, 800)
     pivot_turn(50, 1200)
     pivot_turn(50, 450)
     # back up to the wall
@@ -41,9 +41,9 @@ def run02():
     time.sleep(2)
     left_att(2300, 200)
     # launch to treadmill and does treadmill
-    straight(-75, 1350)
+    straight(-75, 1400)
     # remember this is the oldone pivot_turn(-50, 1580)
-    turn(-85, 760)
+    turn(-85, 825)
     straight(170, 3500)
     right_att(8000, 2000)
     right_att(4000, 2000)
