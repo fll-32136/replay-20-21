@@ -9,6 +9,7 @@ from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 from run01 import *
 from run02 import *
+from run03 import *
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
 
@@ -16,5 +17,11 @@ from run02 import *
 # Create your objects here.
 ev3 = EV3Brick()
 
-bench()
-stepcounter()
+while True:
+    buttons = ev3.buttons.pressed()
+    if Button.UP in buttons:
+        print("Up pressed")
+    elif Button.RIGHT in buttons:
+        print("Right pressed")
+    elif Button.DOWN in buttons:
+        print("Down pressed")
