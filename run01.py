@@ -166,5 +166,5 @@ def run01_6():
     straight(200,2500)
     turn(85,250)
     straight(-150,2500)
-run01_6()
-straight(-150,2500)
+# run01_6()
+# straight(-150,2500)

@@ -47,23 +47,23 @@ WHITE=55
 #         elif gyro_sensor.angle() > gyro_num:
 #             robot.drive(50,-20)
 
-def absolutly_not():
-    straight(100, 3550)
+def run03():
+    straight(400, 1550)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
     turn(-90, 175)
     time.sleep(1)
     # Negative speed makes attachment move 
     left_att(3000, -2000)
-    straight(-1000, 1000)
+    straight(-1000, 1250)
     turn(-90, 230)
-    straight(400, 1600)
-    line_square(11,7,70)
+    straight(400, 1800)
+    line_square(8,5,70)
     straight(400, 400)
     turn(90, 950)
     straight(-200, 1500)
     straight_robot.drive(-200, 0)
-    colorstop(straight_robot, rightcolorsensor, 6)
+    colorstop(straight_robot, rightcolorsensor, 8)
     pivot_turn(-90, 600)
     straight(300, 550)
     right_att(650, -200)
@@ -76,7 +76,7 @@ def absolutly_not():
     while True:
         straight(-100, 800)
         straight(100, 600)
-absolutly_not()
+# run03()
 
     # straight(100, 3550)
     # # robot.settings(0, 0, 100, 100)

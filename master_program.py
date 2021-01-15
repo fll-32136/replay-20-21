@@ -20,8 +20,8 @@ ev3 = EV3Brick()
 while True:
     buttons = ev3.buttons.pressed()
     if Button.UP in buttons:
-        print("Up pressed")
+        run01_6()
     elif Button.RIGHT in buttons:
-        print("Right pressed")
+        run02()
     elif Button.DOWN in buttons:
-        print("Down pressed")
+        run03()
