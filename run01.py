@@ -13,17 +13,18 @@ from line_square import *
 import time
 
 
+ev3=EV3Brick()
 #initializing  color sensor and motors
 leftcolorsensor=ColorSensor(Port.S3)
 rightcolorsensor=ColorSensor(Port.S1)
 BLACK=5
 WHITE=55
 # intializing drivebase and related values
-right_motor = Motor(Port.A)
-left_motor = Motor(Port.B) 
-wheel_diameter = 56 
-axle_track = 114
-straight_robot = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
+# right_motor = Motor(Port.A)
+# left_motor = Motor(Port.B) 
+# wheel_diameter = 46 
+# axle_track = 114
+# drivebase = DriveBase(right_motor, left_motor, wheel_diameter, axle_track)
 # right_att_motor = Motor(Port.D, positive_direction=Direction.CLOCKWISE, gears=None)
 
 def bench():
@@ -151,32 +152,20 @@ def run01_6():
     # left_att(2000,-700)
     # left_att(1800,500)
     # wait(100)
-    straight(-250,1050)
+    straight(-250,1000)
     turn(-50,1250)
     # print("squaring to line")
-    # straight(200,900)
-
+    straight(200,750)
     line_square(11,5,110)
-    wait(10)
-    straight(200,200)
-    wait(10)
-    colorstop(straight_robot, leftcolorsensor, 5)
-    turn(-50,360)
+    turn(-50,302)
     straight(200,900)
-    # straight(-200,750)
-    # turn(75,765)
-    # straight(111,1400)
-    # straight(-200,750)
-
-    # turn(-85,1100)
-    # straight(200,2400)
-    # turn(85,250)
-    # straight(-200,900)
-    # wait(100)
-    # straight_robot.drive(-200,-30)
-    # wait(2500)
-    # straight_robot.stop()
-    # straight(-300,1000)
-#run01_6()
-#straight(-100,4000)
-# line_square_backward(11,5,-110)
+    straight(-200,750)
+    turn(75,775)
+    straight(111,1500)
+    straight(-200,850)
+    turn(-85,1400)
+    straight_robot.drive(-200,20)
+    wait(3500)
+    straight_robot.stop()
+# run01_6()
+# straight(-150,2500)
