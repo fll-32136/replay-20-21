@@ -35,7 +35,7 @@ def run02():
     straight(-200, 400)
     straight_robot.drive(-100, 0)
     colorstop(straight_robot, rightcolor, 9)
-    straight(200, 310)
+    straight(200, 330)
     # straight(-150, 800)
     pivot_turn(50, 1200)
     pivot_turn(50, 450)
