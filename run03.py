@@ -48,10 +48,10 @@ WHITE=55
 #             robot.drive(50,-20)
 
 def run03():
-    straight(400, 1580)
+    straight(400, 1450)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
-    turn(-90, 215)
+    turn(-90, 210)
     time.sleep(1)
     # Negative speed makes attachment move 
     left_att(3000, -2000)
@@ -70,7 +70,7 @@ def run03():
     time.sleep(0.5)
     straight(-300, 500)
     turn(90, 500)
-    straight(400, 1400)
+    straight(400, 1350)
     turn(90, 700)
     straight(-100, 1500)
     while True:
