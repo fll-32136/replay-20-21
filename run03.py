@@ -48,7 +48,7 @@ WHITE=55
 #             robot.drive(50,-20)
 
 def run03():
-    straight(400, 1640)
+    straight(400, 1540)
     # robot.settings(0, 0, 100, 100)
     # robot.turn(-12.5)
     turn(-90, 201)
