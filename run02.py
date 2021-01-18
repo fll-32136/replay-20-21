@@ -50,8 +50,8 @@ def run02():
     # launch to treadmill and does treadmill
     straight(-75, 1400)
     # remember this is the oldone pivot_turn(-50, 1580)
-    turn(-85, 810) # 780 #740
-    straight(170, 3600)
+    turn(-85, 817) # 780 #740
+    straight(170, 3550)
     right_att(8000, 2000)
     # after treadmill
     straight(-250, 300)
@@ -63,11 +63,11 @@ def run02():
     straight(250, 400)
     left_att(1200, -300)
     pivot_turn(-50, 1670)
-    straight( 250, 250)
+    straight( 250, 220)
     left_att(1200, 300)
     # Hooks onto row machine
     straight(-100, 1100)
-    pivot_turn(50, 600)
+    pivot_turn(50, 605)
     # finishes row machine
     left_att(1700, -300)
     straight(-200, 800)

@@ -158,7 +158,7 @@ def run01_6():
     straight(200,850)
     line_square(11,5,110)
     # Turn for boccia
-    turn(-50,335)
+    turn(-50,360)
     straight(200,900)
     straight(-100,1400)
     #Turn for basketball
