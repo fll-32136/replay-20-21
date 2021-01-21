@@ -105,9 +105,13 @@ def attachment(direction, degrees):
     robot.drive_time(math.pi * axle_track / 4, direction, degrees) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
-def colorstop(straight_robot,colorsensor,colorvalue): #Takes in which color sensor you are using and the value of the color
-    while True:
-        if colorsensor.reflection()<=colorvalue: #if the color sensor you chose has the same value as what you put in,
-            straight_robot.stop() #the robot stops
+# Takes in which color sensor you are using and the value of the color
+def colorstop(straight_robot,colorsensor,colorvalue):
+    # It is in a while loop so that it is always checking
+    while True: 
+        # If the color sensor you chose has the same value as what you put in,
+        if colorsensor.reflection()<=colorvalue: 
+            # The robot stops
+            straight_robot.stop() 
             break
     straight_robot.stop()
