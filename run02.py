@@ -67,59 +67,10 @@ def run02():
     straight(-100, 1150)
     pivot_turn(50, 400)
     # finishes row machine
-    
-    # # left_att(2000, -200)
-    # # straight(-200, 300)
-    # # turn(85, 500)
-    # # line_square(9,5, 120)
-    
-    # # straight(200, 450)
-    
-    # # turn(85, 855)
-    # # straight(5000, 7000)
     left_att(2000, -200)
     straight(-200, 800)
     turn(-85, 200)
     straight(-5000, 6000)
-    # straight(200, 1200)
-    # turn(-85, 810)
-    # straight(200, 300)
-    # left_att(2000, 200)
-    '''
-    # does row machine
-    left_att(300, -200)
-    straight(100, 500)
-    left_att(600, 200)
-    straight(-100, 1400)
-    pivot_turn(50, 550)
-
-
-    straight_robot.drive(250, 0)
-    time.sleep(1.5)
-    right_att_motor.run(-1000)
-    time.sleep(3)
-    straight_robot.stop()
-    right_att_motor.stop()
-    # right_att(2000,2000)
-    # right_att(2000,2000)
-'''
-
-    # launches to row machine
-
-
-#buuin
-'''
-    #do the lifty thing later
-    straight(-175, 650)
-    turn(-50, 1350)
-
-    #after pull-up bar
-    turn(50, 800)
-    straight(175, 1850)
-    while True:
-        straight(175, 250)
-        straight(-175, 225)
-    #after robot dance
-'''
+   
 # run02()
     
