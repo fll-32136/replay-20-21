@@ -105,35 +105,9 @@ def attachment(direction, degrees):
     robot.drive_time(math.pi * axle_track / 4, direction, degrees) #Time in seconds by thousands
     robot.stop(Stop.BRAKE)
 
-# right_att(360, 1000)
-# left_att(360, 1000)
-# straight(1000, 1750)
-# straight(25, 9000)
-
-def color_finder():
-    line_sensor = ColorSensor(Port.S3)
-    print(line_sensor.reflection())
-
-def color_stop(color_num):   
-    line_sensor = ColorSensor(Port.S3)
-    while line_sensor.reflection() != color_num:  #when color is not black
-        straight(200,200) #go straight
-
-def colorstop(straight_robot,colorsensor,colorvalue):
+def colorstop(straight_robot,colorsensor,colorvalue): #Takes in which color sensor you are using and the value of the color
     while True:
-        if colorsensor.reflection()<=colorvalue:
-            straight_robot.stop()
+        if colorsensor.reflection()<=colorvalue: #if the color sensor you chose has the same value as what you put in,
+            straight_robot.stop() #the robot stops
             break
     straight_robot.stop()
-
-def infiniteturn():
-    while True:
-        
-        x= 'hi'
-
-    # motor=Motor(Port.A)
-    # motor1=Motor(Port.B)
-    # colorsensor=ColorSensor(Port.S3)
-    # robot = DriveBase(motor, motor1, wheel_diameter, axle_track)
-    # BLACK=5
-    # WHITE=54
