@@ -25,56 +25,45 @@ rightdrive= Motor(Port.A, positive_direction=Direction.CLOCKWISE, gears=None)
 
 
 
-def line_square(RBLACK,LBLACK,SPEED):
-    r = rline_sensor.reflection()
+def line_square(RBLACK,LBLACK,SPEED): #Takes in the needed color values and speed
+    
+    r = rline_sensor.reflection() #Redefines the color sensors to r and l
     l = lline_sensor.reflection()
-    print("right = ",r, "left =",l)
 
-    straight_robot.drive(SPEED,0)
+    straight_robot.drive(SPEED,0) #Makes robot go straight forever
     while True:
-        r = rline_sensor.reflection()
+        r = rline_sensor.reflection() #Restates the color sensor values
         l = lline_sensor.reflection()
-        if r <= RBLACK:
+
+        if r <= RBLACK: #If right color sensor hits black, it will stop
             straight_robot.stop()
             wait(100)
-            while l > LBLACK:
-                r = rline_sensor.reflection()
+            while l > LBLACK: #The left wheel moves unit it is on black
+                r = rline_sensor.reflection() #Restates the color sensor values
                 l = lline_sensor.reflection()
-                print("right = ",r, "left =",l)
                 leftdrive.run(50)
             leftdrive.stop()
-            while r > RBLACK:
-                r = rline_sensor.reflection()
+            while r > RBLACK: #To be sure it's completely on the line, right wheel moves back until it is on black
+                r = rline_sensor.reflection() #Restates the color sensor values
                 l = lline_sensor.reflection()
-                print("right = ",r, "left =",l)
                 rightdrive.run(-50)
             rightdrive.stop()
             break
 
-        if l <= LBLACK:
+        if l <= LBLACK: #If right color sensor hits black, it will stop
             straight_robot.stop()
             wait(100)
-            while r > RBLACK:
-                r = rline_sensor.reflection()
+            while r > RBLACK: #The right wheel moves unit it is on black
+                r = rline_sensor.reflection() #Restates the color sensor values
                 l = lline_sensor.reflection()
-                print("right = ",r, "left =",l)
                 rightdrive.run(50)
             rightdrive.stop()
-            while l > LBLACK:
-                r = rline_sensor.reflection()
+            while l > LBLACK: #To be sure it's completely on the line, left wheel moves back until it is on black
+                r = rline_sensor.reflection() #Restates the color sensor values
                 l = lline_sensor.reflection()
-                print("right = ",r, "left =",l)
                 leftdrive.run(-50)
             leftdrive.stop()
             break
 
-        if r <= RBLACK and l <= LBLACK:
+        if r <= RBLACK and l <= LBLACK: #If both sensors sense black at the same time, it just stops
             break
-
-# r = rline_sensor.reflection()
-# l = lline_sensor.reflection()
-# print("right = ",r, "left =",l)
-
-r = rline_sensor.reflection()
-l = lline_sensor.reflection()
-print("right = ",r, "left =",l)

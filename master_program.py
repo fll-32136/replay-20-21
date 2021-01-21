@@ -17,11 +17,11 @@ from run03 import *
 # Create your objects here.
 ev3 = EV3Brick()
 
-while True:
+while True: #This program is running forever so that you can press the buttons at any time
     buttons = ev3.buttons.pressed()
-    if Button.UP in buttons:
+    if Button.UP in buttons: #If the up button is hit, it would run run 1
         run01_6()
-    elif Button.RIGHT in buttons:
+    elif Button.RIGHT in buttons: #If the right button is pressed it would run run 2
         run02()
-    elif Button.DOWN in buttons:
+    elif Button.DOWN in buttons: #If the down button is pressed it would run run 3
         run03()
