@@ -32,14 +32,14 @@ WHITE=55
 # Alignment: Attachment position on the last line to the left
 
 def run03():
-    # Robot goes moves toward and completes dropping cubes in bench
-    straight(400, 1550)
-    turn(-90, 175)
+    # Moves straight towards bench and drops all 4 cubes
+    straight(400, 1450)
+    turn(-90, 210)
     time.sleep(1)
     left_att(3000, -2000)
     # Goes back and moves turns toward boccia target
     straight(-1000, 1250)
-    turn(-90, 230)
+    turn(-90, 265)
     straight(400, 1800)
     # Does a line square at the line next to basketball and continues toward boccia target
     line_square(8,5,70)
@@ -50,14 +50,14 @@ def run03():
     straight_robot.drive(-200, 0)
     colorstop(straight_robot, rightcolorsensor, 8)
     # Turns toward boccia target and drops all 8 cubes
-    pivot_turn(-90, 600)
+    pivot_turn(-90, 650)
     straight(300, 550)
     right_att(650, -200)
     time.sleep(0.5)
     # Goes to robot dance and infinitely moves back and forth
     straight(-300, 500)
     turn(90, 500)
-    straight(400, 1300)
+    straight(400, 1350)
     turn(90, 700)
     straight(-100, 1500)
     while True:
