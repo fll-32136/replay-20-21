@@ -20,7 +20,7 @@ while True:
     buttons = ev3.buttons.pressed()
     # If the up button is hit, it would run run 1
     if Button.UP in buttons: 
-        run01_6()
+        run01_7()
     # If the right button is pressed it would run run 2
     elif Button.RIGHT in buttons: 
         run02()

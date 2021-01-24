@@ -17,11 +17,4 @@ from run03 import *
 # Create your objects here.
 ev3 = EV3Brick()
 
-while True:
-    buttons = ev3.buttons.pressed()
-    if Button.UP in buttons:
-        print("Up pressed")
-    elif Button.RIGHT in buttons:
-        print("Right pressed")
-    elif Button.DOWN in buttons:
-        print("Down pressed")
+straight(1000, 10000)

@@ -42,7 +42,7 @@ def run01_6():
     straight(200,850)
     line_square(11,5,110)
     # Turns to Boccia
-    turn(-50,360)
+    turn(-50,390)
     straight(200,900)
     straight(-100,1400)
     # Turn for basketball
@@ -60,5 +60,38 @@ def run01_6():
     straight_robot.stop()
 # run01_6()
 
-
-
+def run01_7():
+    # knocks backrest off
+    straight(200,1700)
+    turn(-85,400)    
+    straight(200,600)
+    # flattens bench
+    turn(85,520)
+    straight(-200,450)
+    turn(-85,450)
+    # turns and goes staight before squaring up to boccia line
+    straight(200,200)
+    turn(85,400)
+    straight(-200,300)
+    turn(85,870)
+    line_square(11,5,100)
+    straight(-250,1375)
+    turn(-50,1350)
+    straight(200,850)
+    line_square(11,5,110)
+    # Turns to Boccia
+    turn(-50,350)
+    straight(200,900)
+    straight(-100,1360)
+    # Turn for basketball
+    turn(75,707)
+    straight(111,1540)
+    # # Cube goes in basketball
+    straight(-200,575)
+    turn(-85,1300)
+    # # turns back to bring health unit into base
+    straight_robot.drive(-200,20)
+    # # robot comes back to base into base
+    wait(4400)
+    straight_robot.stop()
+# run01_7()
