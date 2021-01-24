@@ -49,7 +49,7 @@ def run02():
     # launch to treadmill and does treadmill
     straight(-75, 1400)
     # remember this is the oldone pivot_turn(-50, 1580)
-    turn(-85, 740) # 780 #740
+    turn(-85, 780) # 780 #740
     straight(170, 3550)
     right_att(8000, 2000)
     # after treadmill
