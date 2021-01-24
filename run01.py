@@ -55,7 +55,7 @@ def run01_6():
     # turns back to bring health unit into base
     pivot_turn(-85,1350)
     straight_robot.drive(-200,20)
-    # robot comes back to base into base
+    # robot comes back to base
     wait(4400)
     straight_robot.stop()
 # run01_6()
