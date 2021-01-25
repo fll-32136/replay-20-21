@@ -33,7 +33,7 @@ WHITE=55
 
 def run03():
     # Moves straight towards bench and drops all 4 cubes
-    straight(400, 1550)
+    straight(400, 1500)
     turn(-90, 210)
     time.sleep(1)
     left_att(3000, -2000)
@@ -48,16 +48,16 @@ def run03():
     # Backs up with a colorstop at the line right next to boccia target
     straight(-200, 1500)
     straight_robot.drive(-200, 0)
-    colorstop(straight_robot, rightcolorsensor, 8)
+    colorstop(straight_robot, leftcolorsensor, 8)
     # Turns toward boccia target and drops all 8 cubes
     pivot_turn(-90, 650)
-    straight(300, 550)
+    straight(300, 520)
     right_att(650, -200)
     time.sleep(0.5)
     # Goes to robot dance and infinitely moves back and forth
     straight(-300, 500)
     turn(90, 500)
-    straight(400, 1300)
+    straight(400, 1050)
     turn(90, 700)
     straight(-100, 1500)
     while True:
