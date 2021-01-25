@@ -85,13 +85,16 @@ def run01_7():
     straight(-100,1360)
     # Turn for basketball
     turn(75,707)
-    straight(111,1540)
+    straight(111,1460)
     # # Cube goes in basketball
     straight(-200,575)
-    turn(-85,1300)
+    turn(-85,1330)
     # # turns back to bring health unit into base
-    straight_robot.drive(-200,20)
+    straight_robot.drive(-200,14)
     # # robot comes back to base into base
-    wait(4400)
+    wait(2450)
+    straight_robot.stop()
+    straight_robot.drive(-60,50)
+    wait(1300)
     straight_robot.stop()
 # run01_7()
